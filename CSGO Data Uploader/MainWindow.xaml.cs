@@ -1,7 +1,11 @@
-﻿using Google.GData.Client;
+﻿using CSGO_Data_Uploader;
+using Google.GData.Client;
 using Google.GData.Spreadsheets;
+using Hearthstone_Deck_Tracker;
+using MahApps.Metro.Controls.Dialogs;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -26,6 +30,7 @@ namespace CSGO_Data_Uploader
         public MainWindow()
         {
             InitializeComponent();
+            ShowNewUpdateMessage(new Version("0.0"));
         }
 
         private async void Add(object sender, RoutedEventArgs e)
@@ -91,6 +96,40 @@ namespace CSGO_Data_Uploader
                 }
             }
         }
+        private void ShowNewUpdateMessage(Version newVersion = null)
+        {
+            const string releaseDownloadUrl = @"https://github.com/TomSmith27/CS-GO-Data-Uploader/releases/";
+            var settings = new MetroDialogSettings { AffirmativeButtonText = "Download", NegativeButtonText = "Not now" };
+            var version = newVersion;
+            if (version == null)
+                return;
+            try
+            {
+                var newVersionString = string.Format("{0}.{1}.{2}", version.Major, version.Minor, version.Build);
+                    
+                        Helper.CheckForUpdates(out version);
+                        if (version > Helper.GetCurrentVersion())
+                        {
+                            if (version != null)
+                                newVersionString = string.Format("{0}.{1}.{2}", version.Major, version.Minor, version.Build);
+
+                            try
+                            {
+                                Process.Start("Updater.exe", string.Format("{0} {1}", Process.GetCurrentProcess().Id, newVersionString));
+                                Application.Current.Shutdown();
+                            }
+                            catch(Exception e)
+                            {
+                                Process.Start(releaseDownloadUrl);
+                            }
+                        }
+                }
+            catch (Exception e)
+            {
+            }
+        }
+
+    }
     }
     public class GoogleSpreadsheet
     {
@@ -259,4 +298,3 @@ namespace CSGO_Data_Uploader
         }
     }
 
-}
