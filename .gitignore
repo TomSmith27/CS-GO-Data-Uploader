@@ -49,7 +49,7 @@ build/
 # Visual C++ cache files
 ipch/
 *.aps
-*.ncb
+*.ncb 
 *.opensdf
 *.sdf
 *.cachefile
