@@ -50,7 +50,7 @@ namespace Hearthstone_Deck_Tracker
 			newVersionOut = null;
 
 			const string versionXmlUrl =
-				@"https://raw.githubusercontent.com/Epix37/Hearthstone-Deck-Tracker/master/Hearthstone%20Deck%20Tracker/Version.xml";
+                @"https://raw.githubusercontent.com/TomSmith27/CS-GO-Data-Uploader/master/CSGO%20Data%20Uploader/Version.xml";
 
 			var currentVersion = GetCurrentVersion();
 
