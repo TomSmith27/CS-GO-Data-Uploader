@@ -1,0 +1,30 @@
+C:\Users\Tom\Documents\Visual Studio 2012\Projects\CSGO Data Uploader\CSGO Data Uploader\bin\Debug\CSGO Data Uploader.exe.config
+C:\Users\Tom\Documents\Visual Studio 2012\Projects\CSGO Data Uploader\CSGO Data Uploader\bin\Debug\CSGO Data Uploader.exe
+C:\Users\Tom\Documents\Visual Studio 2012\Projects\CSGO Data Uploader\CSGO Data Uploader\bin\Debug\CSGO Data Uploader.pdb
+C:\Users\Tom\Documents\Visual Studio 2012\Projects\CSGO Data Uploader\CSGO Data Uploader\obj\Debug\CSGO Data Uploader.csprojResolveAssemblyReference.cache
+C:\Users\Tom\Documents\Visual Studio 2012\Projects\CSGO Data Uploader\CSGO Data Uploader\obj\Debug\MainWindow.baml
+C:\Users\Tom\Documents\Visual Studio 2012\Projects\CSGO Data Uploader\CSGO Data Uploader\obj\Debug\MainWindow.g.cs
+C:\Users\Tom\Documents\Visual Studio 2012\Projects\CSGO Data Uploader\CSGO Data Uploader\obj\Debug\App.g.cs
+C:\Users\Tom\Documents\Visual Studio 2012\Projects\CSGO Data Uploader\CSGO Data Uploader\obj\Debug\CSGO Data Uploader_MarkupCompile.cache
+C:\Users\Tom\Documents\Visual Studio 2012\Projects\CSGO Data Uploader\CSGO Data Uploader\obj\Debug\CSGO Data Uploader.g.resources
+C:\Users\Tom\Documents\Visual Studio 2012\Projects\CSGO Data Uploader\CSGO Data Uploader\obj\Debug\CSGO_Data_Uploader.Properties.Resources.resources
+C:\Users\Tom\Documents\Visual Studio 2012\Projects\CSGO Data Uploader\CSGO Data Uploader\obj\Debug\CSGO Data Uploader.csproj.GenerateResource.Cache
+C:\Users\Tom\Documents\Visual Studio 2012\Projects\CSGO Data Uploader\CSGO Data Uploader\obj\Debug\CSGO Data Uploader.exe
+C:\Users\Tom\Documents\Visual Studio 2012\Projects\CSGO Data Uploader\CSGO Data Uploader\obj\Debug\CSGO Data Uploader.pdb
+C:\Users\Tom\Documents\Visual Studio 2012\Projects\CSGO Data Uploader\CSGO Data Uploader\bin\Debug\Google.GData.AccessControl.DLL
+C:\Users\Tom\Documents\Visual Studio 2012\Projects\CSGO Data Uploader\CSGO Data Uploader\bin\Debug\Google.GData.Analytics.dll
+C:\Users\Tom\Documents\Visual Studio 2012\Projects\CSGO Data Uploader\CSGO Data Uploader\bin\Debug\Google.GData.Apps.dll
+C:\Users\Tom\Documents\Visual Studio 2012\Projects\CSGO Data Uploader\CSGO Data Uploader\bin\Debug\Google.GData.Blogger.dll
+C:\Users\Tom\Documents\Visual Studio 2012\Projects\CSGO Data Uploader\CSGO Data Uploader\bin\Debug\Google.GData.Calendar.dll
+C:\Users\Tom\Documents\Visual Studio 2012\Projects\CSGO Data Uploader\CSGO Data Uploader\bin\Debug\Google.GData.Client.dll
+C:\Users\Tom\Documents\Visual Studio 2012\Projects\CSGO Data Uploader\CSGO Data Uploader\bin\Debug\Google.GData.Contacts.dll
+C:\Users\Tom\Documents\Visual Studio 2012\Projects\CSGO Data Uploader\CSGO Data Uploader\bin\Debug\Google.GData.ContentForShopping.dll
+C:\Users\Tom\Documents\Visual Studio 2012\Projects\CSGO Data Uploader\CSGO Data Uploader\bin\Debug\Google.GData.Documents.dll
+C:\Users\Tom\Documents\Visual Studio 2012\Projects\CSGO Data Uploader\CSGO Data Uploader\bin\Debug\Google.GData.Extensions.dll
+C:\Users\Tom\Documents\Visual Studio 2012\Projects\CSGO Data Uploader\CSGO Data Uploader\bin\Debug\Google.GData.Photos.dll
+C:\Users\Tom\Documents\Visual Studio 2012\Projects\CSGO Data Uploader\CSGO Data Uploader\bin\Debug\Google.GData.Spreadsheets.dll
+C:\Users\Tom\Documents\Visual Studio 2012\Projects\CSGO Data Uploader\CSGO Data Uploader\bin\Debug\Google.GData.WebmasterTools.dll
+C:\Users\Tom\Documents\Visual Studio 2012\Projects\CSGO Data Uploader\CSGO Data Uploader\bin\Debug\Google.GData.YouTube.dll
+C:\Users\Tom\Documents\Visual Studio 2012\Projects\CSGO Data Uploader\CSGO Data Uploader\bin\Debug\Newtonsoft.Json.dll
+C:\Users\Tom\Documents\Visual Studio 2012\Projects\CSGO Data Uploader\CSGO Data Uploader\bin\Debug\DemoInfo.dll
+C:\Users\Tom\Documents\Visual Studio 2012\Projects\CSGO Data Uploader\CSGO Data Uploader\bin\Debug\DemoInfo.pdb
