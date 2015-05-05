@@ -111,7 +111,7 @@ namespace CSGO_Data_Uploader
                         if (version > Helper.GetCurrentVersion())
                         {
                             if (version != null)
-                                newVersionString = string.Format("{0}.{1}.{2}", version.Major, version.Minor, version.Build);
+                                newVersionString = string.Format("{0}.{1}", version.Major, version.Minor);
 
                             try
                             {

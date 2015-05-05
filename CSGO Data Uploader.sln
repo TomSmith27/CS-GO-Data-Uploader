@@ -2,6 +2,10 @@
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2012
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CSGO Data Uploader", "CSGO Data Uploader\CSGO Data Uploader.csproj", "{77EE352D-02C1-4C8B-85EB-4C0CDB3054DD}"
+	ProjectSection(ProjectDependencies) = postProject
+		{A82F5A7E-7BEA-46B1-9972-29B690EF036E} = {A82F5A7E-7BEA-46B1-9972-29B690EF036E}
+		{4DA33EE8-3F32-4D91-82FA-3BC7F014263D} = {4DA33EE8-3F32-4D91-82FA-3BC7F014263D}
+	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DemoParser", "..\..\..\..\..\Desktop\demoinfo-master\demoinfo-master\DemoParser\DemoParser.csproj", "{A82F5A7E-7BEA-46B1-9972-29B690EF036E}"
 EndProject

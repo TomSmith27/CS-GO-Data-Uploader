@@ -60,6 +60,7 @@ namespace Updater
 				{
 					var lockThis = new object();
 					Console.WriteLine("Downloading latest version... 0%");
+                    Console.ReadKey();
 					wc.DownloadProgressChanged += (sender, e) =>
 						{
 							lock(lockThis)
@@ -85,7 +86,7 @@ namespace Updater
 			{
                 Console.WriteLine(e.InnerException);
                 Console.WriteLine(e.ToString());
-                Console.WriteLine("TEST");
+            
 				Console.WriteLine("There was a problem updating to the latest version. Pressing any key will direct you to the manual download.");
 				Console.ReadKey();
                 Process.Start(@"https://github.com/TomSmith27/CS-GO-Data-Uploader/releases/");
