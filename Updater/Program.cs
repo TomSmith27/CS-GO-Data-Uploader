@@ -98,25 +98,26 @@ namespace Updater
 			}
 		}
 
-		private static void CopyFiles(string dir, string newPath)
-		{
-			foreach(var subDir in Directory.GetDirectories(dir))
-			{
-				foreach(var file in Directory.GetFiles(subDir))
-				{
-					var newDir = subDir.Replace(newPath, string.Empty);
-					if(!Directory.Exists(newDir))
-						Directory.CreateDirectory(newDir);
+        private static void CopyFiles(string dir, string newPath)
+        {
+            foreach (var subDir in Directory.GetDirectories(dir))
+            {
+                foreach (var file in Directory.GetFiles(subDir))
+                {
+                    var newDir = subDir.Replace(newPath, string.Empty);
+                    if (!Directory.Exists(newDir))
+                        Directory.CreateDirectory(newDir);
 
-					var newFilePath = file.Replace(newPath, string.Empty);
-					Console.WriteLine("Writing {0}", newFilePath);
-					if(file.Contains("Updater"))
-						File.Copy(file, file.Replace("Updater", "Updater_new"));
-					else
-						File.Copy(file, newFilePath, true);
-				}
-				CopyFiles(subDir, newPath);
-			}
-		}
+                    var newFilePath = file.Replace(newPath, string.Empty);
+                    Console.WriteLine("Writing {0}", newFilePath);
+                    if (file.Contains("Updater"))
+                        File.Copy(file, file.Replace("Updater", "Updater_new"));
+                    else
+                        File.Copy(file, newFilePath, true);
+                }
+                CopyFiles(subDir, newPath);
+            }
+        }
+		
 	}
 }

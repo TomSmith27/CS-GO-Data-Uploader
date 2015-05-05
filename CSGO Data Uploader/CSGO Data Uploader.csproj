@@ -201,6 +201,7 @@
   <ItemGroup>
     <Content Include="Version.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <SubType>Designer</SubType>
     </Content>
   </ItemGroup>
   <ItemGroup>
