@@ -11,7 +11,7 @@ namespace Updater
 {
 	internal class Program
 	{
-		private const string Url = @"https://github.com//TomSmith27/CS-GO-Data-Uploader/releases/download/{0}/CSGO.Data.Uploader.zip";
+		private const string Url = @"https://github.com//TomSmith27/CS-GO-Data-Uploader/releases/download/{0}/CS.GO.Data.Uploader.zip";
 
 		private static void Main(string[] args)
 		{
@@ -109,11 +109,12 @@ namespace Updater
                         Directory.CreateDirectory(newDir);
 
                     var newFilePath = file.Replace(newPath, string.Empty);
+                    var outputPath = newFilePath.Substring(newFilePath.LastIndexOf('\\') + 1);
                     Console.WriteLine("Writing {0}", newFilePath);
                     if (file.Contains("Updater"))
                         File.Copy(file, file.Replace("Updater", "Updater_new"));
                     else
-                        File.Copy(file, newFilePath, true);
+                        File.Copy(file, System.Environment.CurrentDirectory + "\\" + outputPath, true);
                 }
                 CopyFiles(subDir, newPath);
             }
