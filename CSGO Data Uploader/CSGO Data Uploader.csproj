@@ -51,7 +51,7 @@
   <ItemGroup>
     <Reference Include="DemoInfo, Version=1.0.0.0, Culture=neutral, PublicKeyToken=dc7de83c756ec63d, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\..\..\..\Desktop\demoinfo-master\demoinfo-master\DemoInfo\bin\Release\DemoInfo.dll</HintPath>
+      <HintPath>..\..\..\demoinfo-master\demoinfo-master\DemoParser\bin\Release\DemoInfo.dll</HintPath>
     </Reference>
     <Reference Include="Google.GData.AccessControl, Version=2.2.0.0, Culture=neutral, PublicKeyToken=b4b8eb9a7afc8328, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
