@@ -99,7 +99,9 @@ namespace Updater
 
         private static void CopyFiles(string installLocation, string downloadLocation)
         {
-            foreach (var file in Directory.GetFiles(downloadLocation))
+            foreach (var dir in Directory.GetDirectories(downloadLocation))
+            {
+                foreach (var file in Directory.GetFiles(dir))
                 {
                     try
                     {
@@ -108,6 +110,8 @@ namespace Updater
                     }
                     catch { }
                 }
+            }
+            
         }
 		
 	}
