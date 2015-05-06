@@ -11,7 +11,7 @@ namespace Updater
 {
 	internal class Program
 	{
-		private const string Url = @"https://github.com//TomSmith27/CS-GO-Data-Uploader/releases/download/{0}/CS.GO.Data.Uploader.zip";
+		private const string Url = @"https://github.com//TomSmith27/CS-GO-Data-Uploader/releases/download/{0}/CSGO.Data.Uploader.zip";
 
 		private static void Main(string[] args)
 		{
@@ -60,7 +60,6 @@ namespace Updater
 				{
 					var lockThis = new object();
 					Console.WriteLine("Downloading latest version... 0%");
-                    Console.ReadKey();
 					wc.DownloadProgressChanged += (sender, e) =>
 						{
 							lock(lockThis)
@@ -75,8 +74,8 @@ namespace Updater
 				File.Move(filePath, filePath.Replace("rar", "zip"));
 				Console.WriteLine("Extracting files...");
 				ZipFile.ExtractToDirectory(filePath, "temp");
-				const string newPath = "temp\\CSGO Data Uploader\\";
-				CopyFiles("temp", newPath);
+				string dowloadPath = System.Environment.CurrentDirectory + "\\temp";
+                CopyFiles(System.Environment.CurrentDirectory, dowloadPath);
 				Console.WriteLine("Cleaning up...");
 				Console.WriteLine("Done!");
 
@@ -98,26 +97,17 @@ namespace Updater
 			}
 		}
 
-        private static void CopyFiles(string dir, string newPath)
+        private static void CopyFiles(string installLocation, string downloadLocation)
         {
-            foreach (var subDir in Directory.GetDirectories(dir))
-            {
-                foreach (var file in Directory.GetFiles(subDir))
+            foreach (var file in Directory.GetFiles(downloadLocation))
                 {
-                    var newDir = subDir.Replace(newPath, string.Empty);
-                    if (!Directory.Exists(newDir))
-                        Directory.CreateDirectory(newDir);
-
-                    var newFilePath = file.Replace(newPath, string.Empty);
-                    var outputPath = newFilePath.Substring(newFilePath.LastIndexOf('\\') + 1);
-                    Console.WriteLine("Writing {0}", newFilePath);
-                    if (file.Contains("Updater"))
-                        File.Copy(file, file.Replace("Updater", "Updater_new"));
-                    else
-                        File.Copy(file, System.Environment.CurrentDirectory + "\\" + outputPath, true);
+                    try
+                    {
+                        if (!file.Contains("Updater"))
+                            File.Copy(file, installLocation + "\\" + file.Substring(file.LastIndexOf('\\') + 1), true);
+                    }
+                    catch { }
                 }
-                CopyFiles(subDir, newPath);
-            }
         }
 		
 	}

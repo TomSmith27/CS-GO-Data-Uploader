@@ -30,6 +30,7 @@ namespace CSGO_Data_Uploader
         public MainWindow()
         {
             InitializeComponent();
+            Title = "HELLO";
             ShowNewUpdateMessage(new Version("0.0"));
         }
 
@@ -108,7 +109,9 @@ namespace CSGO_Data_Uploader
                 var newVersionString = string.Format("{0}.{1}.{2}", version.Major, version.Minor, version.Build);
                     
                         Helper.CheckForUpdates(out version);
-                        if (version > Helper.GetCurrentVersion())
+                        Version currentVersion = Helper.GetCurrentVersion();
+                        Title = "CSGO Data Loader " + string.Format("{0}.{1}.{2}", currentVersion.Major, currentVersion.Minor, currentVersion.Build); ;
+                        if (version > currentVersion)
                         {
                             if (version != null)
                                 newVersionString = string.Format("{0}.{1}", version.Major, version.Minor);
