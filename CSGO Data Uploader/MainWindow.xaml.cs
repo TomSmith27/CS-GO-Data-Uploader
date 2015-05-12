@@ -27,39 +27,25 @@ namespace CSGO_Data_Uploader
     public partial class MainWindow : Window
     {
         GoogleSpreadsheet g = new GoogleSpreadsheet();
+        string[] files = new string[100];
+        List<string> matchIds;
         public MainWindow()
         {
             InitializeComponent();
-            Title = "HELLO";
             ShowNewUpdateMessage(new Version("0.0"));
+            matchIds = GetLocalMatches();
+            Output.Content = string.Format("Found {0} Total matches click add to begin processing", files.Length);
+            
         }
 
         private async void Add(object sender, RoutedEventArgs e)
         {
+            AddButton.IsEnabled = false;
            await Task.Run( () => ParseGame());
         }
 
         private void ParseGame()
         {
-            string path = "C:\\Program Files (x86)\\SteamLibrary\\steamapps\\common\\Counter-Strike Global Offensive\\csgo\\replays";
-            string[] files = new string[100];
-            try
-            {
-                files = System.IO.Directory.GetFiles(path, "*.dem");
-            }
-            catch
-            {
-                try
-                {
-                    path = "C:\\Program Files (x86)\\Steam\\SteamApps\\common\\Counter-Strike Global Offensive\\csgo\\replays";
-                    files = System.IO.Directory.GetFiles(path, "*.dem");
-                }
-                catch
-                {
-
-                }
-            }
-            List<string> matchIds = g.GetColumnData("matchid").Distinct().ToList();
             int filesProcessed = 0, filesSkipped = 0;
             //  files = files.Take(2).ToArray();
             // Every argument is a file, so let's iterate over all the arguments
@@ -85,6 +71,31 @@ namespace CSGO_Data_Uploader
 
                 AddDataToSheet(parser);
             }
+            MessageBox.Show("Done uploading");
+        }
+
+        private List<string> GetLocalMatches()
+        {
+            string path = "C:\\Program Files (x86)\\SteamLibrary\\steamapps\\common\\Counter-Strike Global Offensive\\csgo\\replays";
+
+            try
+            {
+                files = System.IO.Directory.GetFiles(path, "*.dem");
+            }
+            catch
+            {
+                try
+                {
+                    path = "C:\\Program Files (x86)\\Steam\\SteamApps\\common\\Counter-Strike Global Offensive\\csgo\\replays";
+                    files = System.IO.Directory.GetFiles(path, "*.dem");
+                }
+                catch
+                {
+
+                }
+            }
+            List<string> matchIds = g.GetColumnData("matchid").Distinct().ToList();
+            return matchIds;
         }
 
         private void AddDataToSheet(Parser parser)

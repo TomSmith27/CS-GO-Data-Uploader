@@ -3,7 +3,7 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         Height="350" Width="525">
     <Grid>
-        <Button Content="Add" HorizontalAlignment="Left" Height="34" Margin="178,100,0,0" VerticalAlignment="Top" Width="132" Click="Add"/>
+        <Button Name="AddButton" Content="Add" HorizontalAlignment="Left" Height="34" Margin="178,100,0,0" VerticalAlignment="Top" Width="132" Click="Add"/>
         <Label Name="Output" Content="" HorizontalAlignment="Left" Height="64" Margin="38,208,0,0" VerticalAlignment="Top" Width="399"/>
         <ProgressBar Name="LoadingBar" HorizontalAlignment="Left" Height="24" Margin="107,150,0,0" VerticalAlignment="Top" Width="267" Maximum="100"/>
 
